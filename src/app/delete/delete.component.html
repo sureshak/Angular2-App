@@ -1,0 +1,9 @@
+<div>
+<h1>Delete Operation</h1>
+<label for="ID No:">Please Enter ID to Delete</label>: <input id="Update" type="text" class="form-control" placeholder="ID value"  [(ngModel)]="del"  >
+<br>
+<button (click)=gett() class="btn btn-primary">Click to Delete </button>
+</div>
+<div id="sucsss" [hidden]="!succ">
+  	<h1>Data Deleted!!!</h1>
+  	</div>

@@ -1,0 +1,47 @@
+<div [hidden]='update'>
+<h1>Update Operation</h1>
+<label for="ID No:">Please Enter the ID</label>: <input id="Update" type="text" class="form-control" placeholder="ID value"  [(ngModel)]="Update"  >
+<br>
+<button (click)=gett() class="btn btn-primary">Click to Fetch </button>
+</div>
+<div id="updateform" [hidden]="!visible">
+	
+  <form #form="ngForm" (ngSubmit)="UpdateForm(form.value);">
+
+    <div class="form-group">
+
+      <label for="username">ID</label>
+      <input id="ID" type="text" class="form-control" placeholder="ID"  [(ngModel)]="ID"  name="ID">
+
+      <label for="username">Name</label>
+      <input id="Name" type="text" class="form-control" placeholder="Username"  [(ngModel)]="Name"  name="Name">
+    
+
+    
+      <label for="email">Email</label>
+      <input id="Email" type="email" class="form-control" placeholder="Email" [(ngModel)]="Email"  name="Email"   >
+    
+   
+      <label for="mobile">Mobile</label>
+      <input id="Mobile" type="number" class="form-control" placeholder="Mobile No" maxlength="10" [(ngModel)]="Mobile"  name="Mobile" >
+    
+
+    
+      <label for="pincode">Pincode</label>
+      <input id="Pincode" type="number" class="form-control" placeholder="Pincode"  maxlength="6" [(ngModel)]="Pincode"  name="Pincode" >
+    
+
+    <br>
+      <button type="submit" class="btn btn-primary">Continue</button>
+    </div>
+  </form>
+</div>
+ <div id="updateformm" [hidden]="!visi">
+  	 <label for="email">Enter Password</label>
+      <input id="Passwd" type="password" class="form-control" placeholder="password" [(ngModel)]="Passwd"  name="Email"   >
+     <br>
+      <button type="submit" class="btn btn-primary" (click)="updatee()" class="btn btn-primary">Update</button>
+  </div>
+  <div id="sucsss" [hidden]="!succ">
+  	<h1>Data updated!!!</h1>
+  	</div>

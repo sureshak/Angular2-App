@@ -1,0 +1,50 @@
+
+<h2><label for="email" >List the Data</label></h2>
+<br>
+
+<br>
+
+<button (click)='get_list()' class="btn btn-primary">Click to view list</button>
+
+
+<div [hidden]="!visible">
+
+<!-- CSS goes in the document HEAD or added to your external stylesheet -->
+<style type="text/css">
+table.hovertable {
+	font-family: verdana,arial,sans-serif;
+	font-size:11px;
+	color:#333333;
+	border-width: 1px;
+	border-color: #999999;
+	border-collapse: collapse;
+}
+table.hovertable th {
+	background-color:#c3dde0;
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #a9c6c9;
+}
+table.hovertable tr {
+	background-color:#d4e3e5;
+}
+table.hovertable td {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #a9c6c9;
+}
+</style>
+<!-- Table goes in the document BODY -->
+
+<table class="hovertable" width="100%" border="2" cellspacing="2" cellpadding="3">
+<tr>
+	 <th>Id</th>    <th><span>Name</span></th>    <th>Email</th>    <th>Mobile</th>    <th>Pincode</th>
+</tr>
+<tr *ngFor="let x of sam" onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d4e3e5';">
+	<td>{{x.id}}</td><td>{{x.Name}}</td><td>{{x.Email}}</td><td>{{x.Mobile}}</td><td>{{x.Pincode}}</td>
+</tr>
+
+</table>
+</div>

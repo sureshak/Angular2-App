@@ -1,0 +1,35 @@
+
+  <form #form="ngForm" (ngSubmit)="submitForm(form.value);form.reset()">
+
+    <div class="form-group">
+      <label for="username">Name</label>
+      <input id="Name" type="text" class="form-control" placeholder="Username"  [(ngModel)]="name"  name="Name">
+    
+
+    
+      <label for="email">Email</label>
+      <input id="email" type="email" class="form-control" placeholder="Email" [(ngModel)]="email"  name="Email"   >
+    
+
+    
+      <label for="password">Password</label>
+      <input id="Password" type="password" class="form-control" placeholder="Password" [(ngModel)]="passwd"  name="Password" >
+    
+
+    
+      <label for="mobile">Mobile</label>
+      <input id="Mobile" type="number" class="form-control" placeholder="Mobile No" maxlength="10" [(ngModel)]="mobile"  name="Mobile" >
+    
+
+    
+      <label for="pincode">Pincode</label>
+      <input id="Pincode" type="number" class="form-control" placeholder="Pincode"  maxlength="6" [(ngModel)]="pincode"  name="Pincode" >
+    
+
+    <br>
+      <button type="submit" class="btn btn-primary">Register</button>
+    </div>
+     
+
+  </form>
+

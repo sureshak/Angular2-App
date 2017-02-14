@@ -9,7 +9,7 @@ constructor(private http:Http) { }
 		 let headers      = new Headers({ 'Content-Type': 'application/json' });
         let options       = new RequestOptions({ headers: headers });
 
-        return this.http.post("http://192.168.6.153:8000/bk/list/", body, options) // ...using post request
+        return this.http.post("http://127.0.0.1:8000/bk/list/", body, options) // ...using post request
                          .map((res:Response) => res.json())
     }   
 

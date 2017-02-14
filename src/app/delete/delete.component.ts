@@ -13,7 +13,7 @@ succ=false;
 
   ngOnInit() {}
 gett(){
-	this.delee.dele("http://192.168.6.153:8000/bk/rud/"+this.del+"/").subscribe(data =>{console.log(data)})
+	this.delee.dele("http://127.0.0.1:8000/bk/rud/"+this.del+"/").subscribe(data =>{console.log(data)})
 	this.succ=true;
 	this.del="";
 }

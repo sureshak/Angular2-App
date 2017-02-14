@@ -36,7 +36,7 @@ fill(s){
 gett(){
 
 	// console.log("Feting data via api");
-this._put.get_data("http://192.168.6.153:8000/bk/rud/"+this.Update).subscribe(data => {this.stri=data;this.toggle();this.fill(this.stri)})
+this._put.get_data("http://127.0.01:8000/bk/rud/"+this.Update).subscribe(data => {this.stri=data;this.toggle();this.fill(this.stri)})
 
 }
 tog() {
@@ -60,7 +60,7 @@ updatee(){
 	
 	this.sa["Password"]=this.Passwd
 	// console.log(this.sa);
-	this._put.upda("http://192.168.6.153:8000/bk/rud/"+this.Update+"/",this.sa).subscribe(d =>{console.log();this.succ=true;
+	this._put.upda("http://127.0.0.1/bk/rud/"+this.Update+"/",this.sa).subscribe(d =>{console.log();this.succ=true;
 	this.visible=false;
 	this.visi=false;})
 	// console.log("sucess");
